@@ -1,0 +1,14 @@
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/sub_tracker.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/edit_cache.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/rebuild_cache.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/list_install_components.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/install.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/install/local.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/CMakeFiles/install/strip.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/flutter_assemble.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/edit_cache.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/rebuild_cache.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/list_install_components.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/install.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/install/local.dir
+/home/lilnga/Documents/vscode/sub_tracker/sub_tracker/build/linux/x64/debug/flutter/CMakeFiles/install/strip.dir
