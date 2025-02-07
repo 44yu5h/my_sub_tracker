@@ -74,6 +74,10 @@ google_fonts
 2.14
 file:///home/lilnga/.pub-cache/hosted/pub.dev/google_fonts-6.2.1/
 file:///home/lilnga/.pub-cache/hosted/pub.dev/google_fonts-6.2.1/lib/
+google_nav_bar
+2.12
+file:///home/lilnga/.pub-cache/hosted/pub.dev/google_nav_bar-5.0.7/
+file:///home/lilnga/.pub-cache/hosted/pub.dev/google_nav_bar-5.0.7/lib/
 http
 3.4
 file:///home/lilnga/.pub-cache/hosted/pub.dev/http-1.3.0/
@@ -98,6 +102,10 @@ leak_tracker_testing
 3.2
 file:///home/lilnga/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1/
 file:///home/lilnga/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib/
+line_icons
+2.12
+file:///home/lilnga/.pub-cache/hosted/pub.dev/line_icons-2.0.3/
+file:///home/lilnga/.pub-cache/hosted/pub.dev/line_icons-2.0.3/lib/
 lints
 3.1
 file:///home/lilnga/.pub-cache/hosted/pub.dev/lints-4.0.0/
@@ -260,8 +268,8 @@ file:///home/lilnga/.pub-cache/hosted/pub.dev/xml-6.5.0/
 file:///home/lilnga/.pub-cache/hosted/pub.dev/xml-6.5.0/lib/
 sub_tracker
 3.5
-file:///home/lilnga/Documents/vscode/sub_tracker/
-file:///home/lilnga/Documents/vscode/sub_tracker/lib/
+file:///home/lilnga/Documents/vscode/my_sub_tracker/
+file:///home/lilnga/Documents/vscode/my_sub_tracker/lib/
 sky_engine
 3.2
 file:///home/lilnga/flutter/bin/cache/pkg/sky_engine/

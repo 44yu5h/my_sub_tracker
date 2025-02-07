@@ -9,63 +9,66 @@ class SubscriptionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10), // Glass effect
-          child: Container(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15),
+      child: Column(
+        children: [
+          Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1), // Semi-transparent
+              color: Colors.grey.withOpacity(0.1), // Semi-transparent
               borderRadius: BorderRadius.circular(20),
-              // border: Border.all(
-              //     color: Colors.white.withOpacity(0.2)), // Subtle border
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 10,
-                  spreadRadius: 2,
-                  offset: Offset(0, 4),
-                ),
-              ],
             ),
             child: Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.fromLTRB(16, 13, 18, 13),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Subscription Logo/Icon
                   CircleAvatar(
-                    radius: 28,
-                    backgroundColor: Colors.white.withOpacity(0.2),
+                    radius: 25,
+                    backgroundColor: Colors.black,
                     child: _getSubscriptionIcon(subscription.name),
                   ),
                   SizedBox(width: 16),
 
                   // Subscription Details
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          subscription.name,
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "\$${subscription.price.toStringAsFixed(2)} / ${subscription.billingCycle}",
-                          style: TextStyle(color: Colors.grey.shade300),
-                        ),
-                        SizedBox(height: 4),
-                        Text(
-                          "Next Payment: ${_formatDate(subscription.nextPayment)}",
-                          style: TextStyle(
-                              color: Colors.grey.shade400, fontSize: 12),
+                        Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                subscription.name,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              SizedBox(height: 2),
+                              Text(
+                                "Next Payment: ${_formatDate(subscription.nextPayment)}",
+                                style: TextStyle(
+                                    color: Colors.grey.shade500, fontSize: 12),
+                              ),
+                            ]),
+                        Column(
+                          children: [
+                            Text(
+                              "\$${subscription.price.toStringAsFixed(2)}",
+                              style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w700),
+                            ),
+                            Text(
+                              "${subscription.billingCycle}",
+                              style: TextStyle(
+                                  color: Colors.black45, fontSize: 16),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -74,7 +77,8 @@ class SubscriptionCard extends StatelessWidget {
               ),
             ),
           ),
-        ),
+          SizedBox(height: 8),
+        ],
       ),
     );
   }

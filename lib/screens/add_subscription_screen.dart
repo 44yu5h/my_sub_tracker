@@ -23,7 +23,7 @@ class _AddSubscriptionScreenState extends State<AddSubscriptionScreen> {
     return Padding(
       padding: EdgeInsets.all(16),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           TextField(
             controller: _nameController,
@@ -58,8 +58,10 @@ class _AddSubscriptionScreenState extends State<AddSubscriptionScreen> {
             }).toList(),
             onChanged: (value) => setState(() => _category = value!),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black, foregroundColor: Colors.white),
             onPressed: () {
               double? price = double.tryParse(_priceController.text);
               if (price == null) {
@@ -82,7 +84,10 @@ class _AddSubscriptionScreenState extends State<AddSubscriptionScreen> {
                   .addSubscription(newSubscription);
               Navigator.pop(context); // Close the bottom sheet
             },
-            child: Text("Add Subscription"),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(8, 12, 8, 12),
+              child: Text("Add Subscription"),
+            ),
           ),
         ],
       ),

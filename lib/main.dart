@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 import 'providers/subscription_provider.dart';
 import 'screens/home_screen.dart';
@@ -52,34 +54,30 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             Expanded(
               child: _screens[_selectedIndex], // Show the selected screen
             ),
-            BottomNavigationBar(
-              currentIndex: _selectedIndex,
-              onTap: (index) {
-                setState(() {
-                  _selectedIndex = index; // Change tab index
-                });
-              },
-
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home, color: Colors.white), // Home icon
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.calendar_today,
-                      color: Colors.white), // Calendar icon
-                  label: 'Calendar',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.settings,
-                      color: Colors.white), // Settings icon
-                  label: 'Settings',
-                ),
-              ],
-              enableFeedback: true,
-              backgroundColor: Colors.black, // Background color for the bar
-              selectedItemColor: Colors.cyan.shade50, // Highlighted color
-              unselectedItemColor: Colors.white54, // Color for unselected items
+            Container(
+              decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                BoxShadow(blurRadius: 20, color: Colors.black.withOpacity(0.1))
+              ]),
+              padding: EdgeInsets.all(12),
+              child: GNav(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                gap: 10,
+                curve: Curves.easeInCubic,
+                tabBackgroundColor: Colors.cyan.shade50,
+                rippleColor: Colors.cyan.shade50,
+                padding: EdgeInsets.symmetric(horizontal: 32, vertical: 14),
+                tabs: [
+                  GButton(text: "Home", icon: LineIcons.home),
+                  GButton(text: "Calendar", icon: LineIcons.calendar),
+                  GButton(text: "Settings", icon: LineIcons.cog)
+                ],
+                selectedIndex: _selectedIndex,
+                onTabChange: (index) {
+                  setState(() {
+                    _selectedIndex = index; // Change tab index
+                  });
+                },
+              ),
             ),
           ],
         ),
